@@ -12,7 +12,7 @@ El proyecto incluye el modelo lógico, el modelo físico, la documentación téc
 
 # Estructura del Proyecto
 
-```
+```text
 T05_tutawayta_db/
 │
 ├── documentation/
@@ -33,53 +33,45 @@ T05_tutawayta_db/
 
 ---
 
-# Modelo Lógico
+## Modelo Lógico
 
 Representa las entidades, atributos y relaciones de la base de datos.
 
-<p align="center">
-    <img src="image/Copy_of_ASOCIACION_DE_PITAJAYA_-_TUTAWAYTA_LOGICO.png" width="900">
-</p>
+---
+
+## Modelo Físico
+
+Representa la implementación de la base de datos mediante tablas, claves primarias, claves foráneas y restricciones necesarias para el correcto funcionamiento del sistema.
 
 ---
 
-# Modelo Físico
+## Documentación
 
-Representa la implementación de la base de datos con sus tablas, claves primarias, claves foráneas y restricciones.
-
-<p align="center">
-    <img src="image/Copy_of_ASOCIACION_DE_PITAJAYA_-_TUTAWAYTA_FISICO.png" width="900">
-</p>
-
----
-
-# Documentación
-
-La carpeta **documentation/** contiene la documentación técnica de la base de datos:
+La carpeta **documentation/** contiene la documentación técnica del proyecto:
 
 - Base_de_datos.md
 
 ---
 
-# Recursos
+## Recursos
 
-La carpeta **resources/** incluye los archivos PDF correspondientes a:
+La carpeta **resources/** almacena los archivos PDF utilizados como referencia para el diseño de la base de datos:
 
 - Modelo Lógico
 - Modelo Físico
 
 ---
 
-# Scripts
+## Scripts
 
 La carpeta **scripts/** contiene los archivos SQL necesarios para la implementación de la base de datos:
 
-- **Modelo logico.sql** → Define las entidades, relaciones y estructura lógica de la base de datos.
-- **Modelo fisico.sql** → Contiene la implementación física con tablas, tipos de datos, claves primarias, claves foráneas y restricciones.
+- **Modelo logico.sql** → Define las entidades, atributos y relaciones del modelo lógico.
+- **Modelo fisico.sql** → Contiene la creación de tablas, tipos de datos, claves primarias, claves foráneas y restricciones.
 
 ---
 
-# Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 - MySQL
 - SQL
@@ -88,14 +80,40 @@ La carpeta **scripts/** contiene los archivos SQL necesarios para la implementac
 
 ---
 
-# Objetivo
+## Objetivo
 
 Diseñar e implementar una base de datos relacional para la Asociación de Pitajaya Tutawayta, proporcionando una estructura organizada, normalizada y preparada para su integración con una aplicación web.
 
 ---
 
-# Autores
+## Última Actualización
+
+Se realizaron las siguientes mejoras en el proyecto:
+
+- Actualización de la documentación técnica.
+- Incorporación de la estructura completa del repositorio.
+- Organización de las carpetas de documentación, recursos, imágenes y scripts.
+- Inclusión de los modelos lógico y físico de la base de datos.
+- Agregado del archivo **Modelo fisico.sql** en la carpeta **scripts**.
+- Mejora de la descripción del proyecto y de la organización del README.
+- Actualización de la información de autores y mantenimiento del repositorio.
+
+**Versión:** 1.1
+
+---
+
+## Autores
 
 - **Oscar Heyton Sanchez Arias**
 - **Jorge Luis Vilcapuma Trujillo**
 - **Vargas Avendaño Fabrizio Santiago**
+
+---
+
+## Estado del Proyecto
+
+✅ Documentación completada  
+✅ Modelo Lógico implementado  
+✅ Modelo Físico implementado  
+✅ Scripts SQL organizados  
+✅ Repositorio actualizado y listo para su integración con la aplicación web
