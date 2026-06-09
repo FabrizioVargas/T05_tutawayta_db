@@ -105,7 +105,6 @@ Se realizaron las siguientes mejoras en el proyecto:
 ## Autores
 
 - **Oscar Heyton Sanchez Arias**
-- **Jorge Luis Vilcapuma Trujillo**
 - **Vargas Avendaño Fabrizio Santiago**
 
 ---
