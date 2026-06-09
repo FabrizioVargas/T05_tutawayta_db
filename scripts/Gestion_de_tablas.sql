@@ -1,4 +1,3 @@
-CREATE DATABASE IF NOT EXISTS tabla_maestra;
 USE tabla_maestra;
 
 DROP TABLE IF EXISTS detalle_venta;

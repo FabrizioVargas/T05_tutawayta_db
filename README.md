@@ -31,9 +31,10 @@ T05_tutawayta_db/
 |   |-- ASOCIACION_DE_PITAJAYA_-_TUTAWAYTA_LOGICO.pdf
 |
 |-- scripts/
-|   |-- estructura_base_datos.sql
-|   |-- carga_datos_maestros.sql
-|   |-- carga_datos_transaccionales.sql
+|   |-- Gestion_Base_de_Datos.sql
+|   |-- Gestion_de_tablas.sql
+|   |-- Carga_datos_maestros.sql
+|   |-- Carga_datos_transaccionales.sql
 |
 |-- README.md
 ```
@@ -54,18 +55,20 @@ Los scripts estan separados para que la base de datos pueda ejecutarse de forma 
 
 | Archivo | Descripcion |
 | --- | --- |
-| `scripts/estructura_base_datos.sql` | Crea la base de datos, tablas, claves primarias y claves foraneas. |
-| `scripts/carga_datos_maestros.sql` | Inserta datos base como roles, socios, usuarios, clientes, categorias, unidades de medida y productos. |
-| `scripts/carga_datos_transaccionales.sql` | Inserta datos operativos como inventario, compras, ventas y detalle de ventas. |
+| `scripts/Gestion_Base_de_Datos.sql` | Crea la base de datos, la pone en uso y muestra comandos utiles de verificacion. |
+| `scripts/Gestion_de_tablas.sql` | Crea las tablas, claves primarias, claves foraneas y relaciones. |
+| `scripts/Carga_datos_maestros.sql` | Inserta datos base como roles, socios, usuarios, clientes, categorias, unidades de medida y productos. |
+| `scripts/Carga_datos_transaccionales.sql` | Inserta datos operativos como inventario, compras, ventas y detalle de ventas. |
 
 ### Orden de ejecucion
 
 Ejecutar los scripts en el siguiente orden:
 
 ```sql
-SOURCE scripts/estructura_base_datos.sql;
-SOURCE scripts/carga_datos_maestros.sql;
-SOURCE scripts/carga_datos_transaccionales.sql;
+SOURCE scripts/Gestion_Base_de_Datos.sql;
+SOURCE scripts/Gestion_de_tablas.sql;
+SOURCE scripts/Carga_datos_maestros.sql;
+SOURCE scripts/Carga_datos_transaccionales.sql;
 ```
 
 ## Modelos de base de datos
