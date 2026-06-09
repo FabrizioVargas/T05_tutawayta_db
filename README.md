@@ -1,118 +1,90 @@
 # T05_tutawayta_db
 
-# Base de Datos - Asociación de Pitajaya Tutawayta
+## Base de datos - Asociacion de Pitajaya Tutawayta
 
-## Descripción
+Este repositorio reune la documentacion, los diagramas y los scripts SQL de la base de datos para la **Asociacion de Pitajaya Tutawayta**.
 
-Este repositorio contiene la documentación y los archivos relacionados con el diseño e implementación de la base de datos del proyecto **Asociación de Pitajaya Tutawayta**.
+La base de datos esta pensada para organizar la informacion de socios, usuarios, clientes, productos, inventario, compras y ventas.
 
-El proyecto incluye el modelo lógico, el modelo físico, la documentación técnica y los scripts SQL necesarios para la creación de la base de datos.
+## Objetivo
 
----
+Disenar una base de datos relacional que ayude a consultar y mantener ordenada la informacion principal de la asociacion. Con esto se busca facilitar el control de inventario, el registro de compras y ventas, y el seguimiento de las operaciones comerciales.
 
-# Estructura del Proyecto
+## Estructura del proyecto
 
 ```text
 T05_tutawayta_db/
-│
-├── documentation/
-│   └── Base_de_datos.md
-│
-├── image/
-│   ├── Copy_of_ASOCIACION_DE_PITAJAYA_-_TUTAWAYTA_LOGICO.png
-│   └── Copy_of_ASOCIACION_DE_PITAJAYA_-_TUTAWAYTA_FISICO.png
-│
-├── resources/
-│   ├── ASOCIACION_DE_PITAJAYA_-_TUTAWAYTA_LOGICO.pdf
-│   └── ASOCIACION_DE_PITAJAYA_-_TUTAWAYTA_FISICO.pdf
-│
-└── scripts/
-    ├── Modelo logico.sql
-    └── Modelo fisico.sql
+|
+|-- case/
+|   |-- design_database.md
+|   |-- gestion_consultas.md
+|
+|-- documentation/
+|   |-- Base_de_datos.md
+|
+|-- image/
+|   |-- ASOCIACION_DE_PITAJAYA_-_TUTAWAYTA_FISICO.png
+|   |-- ASOCIACION_DE_PITAJAYA_-_TUTAWAYTA_LOGICO.png
+|
+|-- resources/
+|   |-- ASOCIACION_DE_PITAJAYA_-_TUTAWAYTA_FISICO.pdf
+|   |-- ASOCIACION_DE_PITAJAYA_-_TUTAWAYTA_LOGICO.pdf
+|
+|-- scripts/
+|   |-- estructura_base_datos.sql
+|   |-- carga_datos_maestros.sql
+|   |-- carga_datos_transaccionales.sql
+|
+|-- README.md
 ```
 
----
+## Contenido principal
 
-## Modelo Lógico
+| Carpeta | Contenido |
+| --- | --- |
+| `case/` | Documentos del caso, alcance del sistema y consultas principales. |
+| `documentation/` | Diccionario y documentacion tecnica de la base de datos. |
+| `image/` | Imagenes del modelo logico y modelo fisico. |
+| `resources/` | Archivos PDF de los diagramas de base de datos. |
+| `scripts/` | Scripts SQL separados por estructura, datos maestros y datos transaccionales. |
 
-Representa las entidades, atributos y relaciones de la base de datos.
+## Scripts SQL
 
----
+Los scripts estan separados para que la base de datos pueda ejecutarse de forma ordenada.
 
-## Modelo Físico
+| Archivo | Descripcion |
+| --- | --- |
+| `scripts/estructura_base_datos.sql` | Crea la base de datos, tablas, claves primarias y claves foraneas. |
+| `scripts/carga_datos_maestros.sql` | Inserta datos base como roles, socios, usuarios, clientes, categorias, unidades de medida y productos. |
+| `scripts/carga_datos_transaccionales.sql` | Inserta datos operativos como inventario, compras, ventas y detalle de ventas. |
 
-Representa la implementación de la base de datos mediante tablas, claves primarias, claves foráneas y restricciones necesarias para el correcto funcionamiento del sistema.
+### Orden de ejecucion
 
----
+Ejecutar los scripts en el siguiente orden:
 
-## Documentación
+```sql
+SOURCE scripts/estructura_base_datos.sql;
+SOURCE scripts/carga_datos_maestros.sql;
+SOURCE scripts/carga_datos_transaccionales.sql;
+```
 
-La carpeta **documentation/** contiene la documentación técnica del proyecto:
+## Modelos de base de datos
 
-- Base_de_datos.md
+| Modelo | Archivo |
+| --- | --- |
+| Modelo logico | `image/ASOCIACION_DE_PITAJAYA_-_TUTAWAYTA_LOGICO.png` |
+| Modelo fisico | `image/ASOCIACION_DE_PITAJAYA_-_TUTAWAYTA_FISICO.png` |
+| PDF logico | `resources/ASOCIACION_DE_PITAJAYA_-_TUTAWAYTA_LOGICO.pdf` |
+| PDF fisico | `resources/ASOCIACION_DE_PITAJAYA_-_TUTAWAYTA_FISICO.pdf` |
 
----
-
-## Recursos
-
-La carpeta **resources/** almacena los archivos PDF utilizados como referencia para el diseño de la base de datos:
-
-- Modelo Lógico
-- Modelo Físico
-
----
-
-## Scripts
-
-La carpeta **scripts/** contiene los archivos SQL necesarios para la implementación de la base de datos:
-
-- **Modelo logico.sql** → Define las entidades, atributos y relaciones del modelo lógico.
-- **Modelo fisico.sql** → Contiene la creación de tablas, tipos de datos, claves primarias, claves foráneas y restricciones.
-
----
-
-## Tecnologías Utilizadas
+## Tecnologias utilizadas
 
 - MySQL
 - SQL
 - Git
 - GitHub
 
----
-
-## Objetivo
-
-Diseñar e implementar una base de datos relacional para la Asociación de Pitajaya Tutawayta, proporcionando una estructura organizada, normalizada y preparada para su integración con una aplicación web.
-
----
-
-## Última Actualización
-
-Se realizaron las siguientes mejoras en el proyecto:
-
-- Actualización de la documentación técnica.
-- Incorporación de la estructura completa del repositorio.
-- Organización de las carpetas de documentación, recursos, imágenes y scripts.
-- Inclusión de los modelos lógico y físico de la base de datos.
-- Agregado del archivo **Modelo fisico.sql** en la carpeta **scripts**.
-- Mejora de la descripción del proyecto y de la organización del README.
-- Actualización de la información de autores y mantenimiento del repositorio.
-
-**Versión:** 1.1
-
----
-
 ## Autores
 
-- **Oscar Heyton Sanchez Arias**
-- **Vargas Avendaño Fabrizio Santiago**
-
----
-
-## Estado del Proyecto
-
-✅ Documentación completada  
-✅ Modelo Lógico implementado  
-✅ Modelo Físico implementado  
-✅ Scripts SQL organizados  
-✅ Repositorio actualizado y listo para su integración con la aplicación web
+- Oscar Heyton Sanchez Arias
+- Vargas Avendano Fabrizio Santiago
