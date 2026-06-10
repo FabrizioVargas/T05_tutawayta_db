@@ -91,3 +91,4 @@ SOURCE scripts/Carga_datos_transaccionales.sql;
 
 - Oscar Heyton Sanchez Arias
 - Vargas Avendano Fabrizio Santiago
+- jorge luis vilcapuma trujillo
