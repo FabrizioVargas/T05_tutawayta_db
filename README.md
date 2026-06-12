@@ -4,11 +4,11 @@
 
 Este repositorio reune la documentacion, los diagramas y los scripts SQL de la base de datos para la **Asociacion de Pitajaya Tutawayta**.
 
-La base de datos esta pensada para organizar la informacion de socios, usuarios, clientes, productos, inventario, compras y ventas.
+La base de datos `tutawayta_db` esta pensada para organizar la informacion de socios, usuarios, clientes, productos, inventario, compras y ventas.
 
 ## Objetivo
 
-Disenar una base de datos relacional que ayude a consultar y mantener ordenada la informacion principal de la asociacion. Con esto se busca facilitar el control de inventario, el registro de compras y ventas, y el seguimiento de las operaciones comerciales.
+Diseñar una base de datos relacional que ayude a consultar y mantener ordenada la informacion principal de la asociacion. Con esto se busca facilitar el control de inventario, el registro de compras y ventas, y el seguimiento de las operaciones comerciales.
 
 ## Estructura del proyecto
 
@@ -31,10 +31,9 @@ T05_tutawayta_db/
 |   |-- ASOCIACION_DE_PITAJAYA_-_TUTAWAYTA_LOGICO.pdf
 |
 |-- scripts/
-|   |-- Gestion_Base_de_Datos.sql
-|   |-- Gestion_de_tablas.sql
-|   |-- Carga_datos_maestros.sql
-|   |-- Carga_datos_transaccionales.sql
+|   |-- script_estructura.sql
+|   |-- datos_maestros.sql
+|   |-- datos_transaccionales.sql
 |
 |-- README.md
 ```
@@ -55,20 +54,18 @@ Los scripts estan separados para que la base de datos pueda ejecutarse de forma 
 
 | Archivo | Descripcion |
 | --- | --- |
-| `scripts/Gestion_Base_de_Datos.sql` | Crea la base de datos, la pone en uso y muestra comandos utiles de verificacion. |
-| `scripts/Gestion_de_tablas.sql` | Crea las tablas, claves primarias, claves foraneas y relaciones. |
-| `scripts/Carga_datos_maestros.sql` | Inserta datos base como roles, socios, usuarios, clientes, categorias, unidades de medida y productos. |
-| `scripts/Carga_datos_transaccionales.sql` | Inserta datos operativos como inventario, compras, ventas y detalle de ventas. |
+| `scripts/script_estructura.sql` | Crea la base de datos, tablas fisicas en ingles, claves primarias, claves foraneas y relaciones. |
+| `scripts/datos_maestros.sql` | Inserta datos base en `ROLE`, `PARTNER`, `USER`, `CLIENT`, `CATEGORY`, `UNIT_MEASURE` y `PRODUCT`. |
+| `scripts/datos_transaccionales.sql` | Inserta datos operativos en `INVENTORY`, `PURCHASE`, `SALE` y `SALE_DETAIL`. |
 
 ### Orden de ejecucion
 
 Ejecutar los scripts en el siguiente orden:
 
 ```sql
-SOURCE scripts/Gestion_Base_de_Datos.sql;
-SOURCE scripts/Gestion_de_tablas.sql;
-SOURCE scripts/Carga_datos_maestros.sql;
-SOURCE scripts/Carga_datos_transaccionales.sql;
+SOURCE scripts/script_estructura.sql;
+SOURCE scripts/datos_maestros.sql;
+SOURCE scripts/datos_transaccionales.sql;
 ```
 
 ## Modelos de base de datos

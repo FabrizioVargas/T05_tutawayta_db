@@ -1,37 +1,37 @@
-# 🗄️ Sistema de Base de Datos - Tabla Maestra
+# 🗄️ Sistema de Base de Datos - Tutawayta
 
 ## 📌 Descripción General
 
-La base de datos **tabla_maestra** fue creada para almacenar y organizar toda la información del sistema. En ella se gestionan los usuarios, clientes, productos, inventario, compras y ventas, permitiendo mantener un control adecuado de cada operación realizada.
+La base de datos **tutawayta_db** fue diseñada para administrar la información de la Asociación de Pitahaya Tutawayta. Permite registrar y controlar socios, clientes, productos, inventario, compras y ventas, garantizando una gestión organizada y eficiente de las operaciones realizadas.
 
-Su objetivo es centralizar la información y facilitar su administración mediante tablas relacionadas entre sí.
+Su principal objetivo es centralizar la información y facilitar el control de los procesos comerciales relacionados con la producción y comercialización de pitahaya.
 
 ---
 
 ## ⚙️ Base de Datos en MySQL
 
-Para el desarrollo del proyecto se utilizó **MySQL**, un sistema de gestión de bases de datos relacional ampliamente utilizado por su facilidad de uso, rendimiento y compatibilidad con diferentes tecnologías.
+Para el desarrollo del proyecto se utilizó **MySQL**, un sistema de gestión de bases de datos relacional reconocido por su estabilidad, rendimiento y facilidad de administración.
 
 ### Características
 
-- Organización de datos mediante tablas.
-- Soporte para relaciones entre entidades.
-- Seguridad e integridad de la información.
-- Amplia documentación y comunidad.
+- Organización de la información mediante tablas relacionadas.
+- Integridad de datos mediante claves primarias y foráneas.
+- Soporte para consultas y transacciones.
+- Compatibilidad con múltiples tecnologías y herramientas.
 
 ---
 
 ## 📁 Archivos Físicos de la Base de Datos
 
-MySQL almacena la información en archivos físicos dentro del servidor.
+MySQL almacena la información en archivos físicos administrados por el propio servidor.
 
-Para visualizar la ubicación de estos archivos se utiliza:
+Para visualizar la ubicación donde se almacenan los datos se utiliza:
 
 ```sql
 SHOW VARIABLES LIKE 'datadir';
 ```
 
-> **Nota:** Los archivos físicos son administrados automáticamente por MySQL y no deben modificarse manualmente.
+> **Nota:** Los archivos físicos son gestionados automáticamente por MySQL y no deben modificarse manualmente.
 
 ---
 
@@ -40,24 +40,24 @@ SHOW VARIABLES LIKE 'datadir';
 ### Crear Base de Datos
 
 ```sql
-CREATE DATABASE IF NOT EXISTS tabla_maestra;
+CREATE DATABASE IF NOT EXISTS tutawayta_db;
 ```
 
 ### Crear Base de Datos con Configuración Recomendada
 
 ```sql
-CREATE DATABASE IF NOT EXISTS tabla_maestra
+CREATE DATABASE IF NOT EXISTS tutawayta_db
 CHARACTER SET utf8mb4
 COLLATE utf8mb4_spanish_ci;
 ```
 
-### Poner en Uso la Base de Datos
+### Seleccionar la Base de Datos
 
 ```sql
-USE tabla_maestra;
+USE tutawayta_db;
 ```
 
-### Listar las Bases de Datos Existentes
+### Mostrar Bases de Datos Existentes
 
 ```sql
 SHOW DATABASES;
@@ -65,35 +65,21 @@ SHOW DATABASES;
 
 ---
 
-## 🏗️ Estructura de la Base de Datos
+## 🏗️ Estructura General
 
-La base de datos está compuesta por las siguientes tablas:
+La base de datos está organizada en tres grupos principales:
 
 ### 📋 Tablas Maestras
 
-| Tabla | Descripción |
-|--------|-------------|
-| rol | Almacena los roles del sistema |
-| socio | Información de socios o trabajadores |
-| usuario | Datos de acceso al sistema |
-| cliente | Información de clientes |
-| categoria | Clasificación de productos |
-| unidad_medida | Unidades de medida de los productos |
-| producto | Información de los productos |
+Almacenan la información principal del sistema, como socios, usuarios, clientes, productos, categorías y unidades de medida.
 
 ### 📦 Tabla de Control
 
-| Tabla | Descripción |
-|--------|-------------|
-| inventario | Control del stock disponible |
+Permite administrar y supervisar el stock disponible de los productos registrados.
 
 ### 💳 Tablas Transaccionales
 
-| Tabla | Descripción |
-|--------|-------------|
-| compra | Registro de compras realizadas |
-| venta | Registro de ventas realizadas |
-| detalle_venta | Detalle de productos vendidos |
+Registran las operaciones de compra y venta realizadas dentro del sistema, manteniendo la trazabilidad de cada movimiento comercial.
 
 ---
 
@@ -108,7 +94,7 @@ SELECT DATABASE();
 Eliminar la base de datos:
 
 ```sql
-DROP DATABASE tabla_maestra;
+DROP DATABASE tutawayta_db;
 ```
 
 Verificar la eliminación:
@@ -117,20 +103,21 @@ Verificar la eliminación:
 SHOW DATABASES;
 ```
 
-> ⚠️ **Importante:** La eliminación de una base de datos es una acción irreversible.
+> **⚠️ Importante:** La eliminación de una base de datos es una acción irreversible.
 
 ---
 
 ## 🧠 Buenas Prácticas
 
 - Utilizar nombres descriptivos para tablas y campos.
+- Mantener la integridad referencial mediante claves foráneas.
 - Realizar copias de seguridad periódicas.
-- Mantener relaciones mediante claves primarias y foráneas.
 - Verificar la base de datos activa antes de ejecutar cambios importantes.
 - Utilizar `IF NOT EXISTS` para evitar errores durante la creación.
+- Documentar adecuadamente la estructura de la base de datos.
 
 ---
 
 ## ✅ Conclusión
 
-La base de datos **tabla_maestra** permite administrar de forma organizada la información del sistema. Gracias a la relación entre sus tablas, se facilita el control de usuarios, clientes, productos, inventario, compras y ventas, garantizando una mejor gestión de los datos.
+La base de datos **tutawayta_db** permite gestionar de forma organizada la información de la Asociación de Pitahaya Tutawayta. Gracias a su estructura relacional, facilita el control de productos, inventario, clientes, socios y operaciones comerciales, contribuyendo a una administración eficiente y segura de los datos.

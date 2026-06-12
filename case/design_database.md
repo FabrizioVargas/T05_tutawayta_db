@@ -1,17 +1,17 @@
 # Diseños de Base de Datos
 
-## Diseño Logico
+## Diseño logico
 
-![Diseño Logico](../image/ASOCIACION_DE_PITAJAYA_-_TUTAWAYTA_LOGICO.png)
+![Diseño logico](../image/ASOCIACION_DE_PITAJAYA_-_TUTAWAYTA_LOGICO.png)
 
-[Ver PDF del Diseño Logico](../resources/ASOCIACION_DE_PITAJAYA_-_TUTAWAYTA_LOGICO.pdf)
+[Ver PDF del diseño logico](../resources/ASOCIACION_DE_PITAJAYA_-_TUTAWAYTA_LOGICO.pdf)
 
-## Diseño Fisico
+## Diseño fisico
 
-![Diseño Fisico](../image/ASOCIACION_DE_PITAJAYA_-_TUTAWAYTA_FISICO.png)
+![Diseño fisico](../image/ASOCIACION_DE_PITAJAYA_-_TUTAWAYTA_FISICO.png)
 
-[Ver PDF del Diseño Fisico](../resources/ASOCIACION_DE_PITAJAYA_-_TUTAWAYTA_FISICO.pdf)
+[Ver PDF del diseño fisico](../resources/ASOCIACION_DE_PITAJAYA_-_TUTAWAYTA_FISICO.pdf)
 
-## Diccionario de Datos
+## Diccionario de datos
 
-[Ver documentacion de la Base de Datos](../documentation/Base_de_datos.md)
+[Ver diccionario de base de datos](../documentation/Base_de_datos.md)
